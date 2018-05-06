@@ -1,0 +1,39 @@
+SPACE INVADERS NOSTALGIA
+
+
+- Add move with arrows for spaceship ok
+- Have bosses(wow really?)
+- Different enemies
+- Power ups
+- Maybe ship permanent upgrades?
+- Shields for enemies and player and different weapons
+- PowerUps will have a space that will appear and then will drop to bottom
+- Also enemies and bosses will drop power ups 
+- We will have shields, health, score, weapons(missiles,improved lasers etc)
+- Different formations
+- Health bar(change the scale of a sprite by percentage of life remaining)
+
+-Share it!
+
+
+
+28-3-2018 
+
+Add sounds :
+
+- The player fires ok
+- The enemies fire ok 
+- An enemy dies ok
+
+How it will work :
+We will have a formation prefab which we already have (Enemy Formation) that will work like scenes
+Each prefab will have total enemies if all enemies die Instatiate nexr prefab
+
+Add random movemnt to position so it will look more natural
+
+Probably must use Resources.Load
+
+https://www.udemy.com/unitycourse/learn/v4/questions/1390034
+
+Rename and move to different folder 
+Guardians of the universe
