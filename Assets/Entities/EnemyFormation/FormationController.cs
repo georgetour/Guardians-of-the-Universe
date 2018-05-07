@@ -77,9 +77,11 @@ public class FormationController : MonoBehaviour {
     void EnemiesMovement()
     {
 
-        if (transform.position.y > ymax || transform.position.y < ymin)
+
+
+        if ((transform.position.y > ymax && speedY > 0) || (transform.position.y < ymin && speedY < 0))
         {
-            speedY = -(speedY);
+            speedY *= -1;
         }
 
 
@@ -91,6 +93,7 @@ public class FormationController : MonoBehaviour {
 
         rb.velocity = new Vector3(speedX, speedY,0);
         //transform.position += new Vector3(speedX *Time.deltaTime,0,0);
+       
     }
    
 
