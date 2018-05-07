@@ -7,7 +7,7 @@ public class FormationController : MonoBehaviour {
     public GameObject enemyPrefab;
 
     //Width and height of the formation
-    public float width = 5f;
+    public float width = 10f;
     public float height = 5f;
     
     //Max left,right and speed of the formation
@@ -16,25 +16,20 @@ public class FormationController : MonoBehaviour {
     private float ymin;
     private float ymax;
     public float speedX = 3f;
-    private float speedY = 2f;
+    public float speedY = 2f;
     public float spawnDelay = 0.8f;
 
     private bool movingToBottom = true;
 
     public Rigidbody2D rb;
 
-    private GameObject playerShip;
-
-    Vector3 distance;
-
     // Use this for initialization
     void Start () {
 
-        playerShip = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         RestrictPosition();
         SpawnUntilFull();
-        Debug.Log(speedY);
+
 
 
     }
@@ -45,9 +40,8 @@ public class FormationController : MonoBehaviour {
     }
 
 
-
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         
         EnemiesMovement();
@@ -72,8 +66,8 @@ public class FormationController : MonoBehaviour {
         Vector3 bottomMost = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, distance));
         xmin = leftMost.x + (width/2);
         xmax = rightMost.x - (width/2);
-        ymin = 0.5f;
-        ymax = 2.3f;
+        ymin = 0.3f;
+        ymax = 2.8f;
         
         
     }
@@ -83,49 +77,23 @@ public class FormationController : MonoBehaviour {
     void EnemiesMovement()
     {
 
-<<<<<<< HEAD
-        distance.x = transform.position.x -playerShip.transform.position.x;
-        distance.y = transform.position.y - playerShip.transform.position.y;
 
-        //rb.velocity.x = playerShip.transform.position;
 
-        bool moving = false;
-
-        //if (distance.x > 0 && distance.x <5)
-        //{
-        //    speedX *= +1;
-        //}
-        //else if(distance.x < 2)
-        //{
-        //    speedX *= -1;
-        //}
-
-        if (distance.y > 10f && moving == false)
+        if ((transform.position.y > ymax && speedY > 0) || (transform.position.y < ymin && speedY < 0))
         {
-            moving = true;
             speedY *= -1;
-=======
-        if (transform.position.y > ymax || transform.position.y < ymin)
-        {
-            speedY = -(speedY);
->>>>>>> parent of 8b26d9b... Enemies now move at y axis as well
-        }
-
-        else if (distance.y < 3f && moving == true)
-        {
-            moving = false;
-            speedY *= +1;
         }
 
 
+        if (transform.position.x > xmax || transform.position.x < xmin) 
+        {
+            speedX = -(speedX);
+        }
 
-        rb.velocity = new Vector3(0, speedY);
-        Debug.Log("sppedy"+speedY + "dist"+distance.y);
+
+        rb.velocity = new Vector3(speedX, speedY,0);
         //transform.position += new Vector3(speedX *Time.deltaTime,0,0);
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 8b26d9b... Enemies now move at y axis as well
+       
     }
    
 
