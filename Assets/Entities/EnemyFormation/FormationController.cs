@@ -83,6 +83,7 @@ public class FormationController : MonoBehaviour {
     void EnemiesMovement()
     {
 
+<<<<<<< HEAD
         distance.x = transform.position.x -playerShip.transform.position.x;
         distance.y = transform.position.y - playerShip.transform.position.y;
 
@@ -103,6 +104,11 @@ public class FormationController : MonoBehaviour {
         {
             moving = true;
             speedY *= -1;
+=======
+        if (transform.position.y > ymax || transform.position.y < ymin)
+        {
+            speedY = -(speedY);
+>>>>>>> parent of 8b26d9b... Enemies now move at y axis as well
         }
 
         else if (distance.y < 3f && moving == true)
@@ -116,7 +122,10 @@ public class FormationController : MonoBehaviour {
         rb.velocity = new Vector3(0, speedY);
         Debug.Log("sppedy"+speedY + "dist"+distance.y);
         //transform.position += new Vector3(speedX *Time.deltaTime,0,0);
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 8b26d9b... Enemies now move at y axis as well
     }
    
 
