@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guardians of the Universe", "Guardians of the Universe.csproj", "{B06737D5-2623-65CF-B538-702293C042BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guardians of the Universe.Editor", "Guardians of the Universe.Editor.csproj", "{10A0D7C7-BCA3-FAA1-C8C4-A5D5B14029E0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +13,6 @@ Global
 		{B06737D5-2623-65CF-B538-702293C042BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B06737D5-2623-65CF-B538-702293C042BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B06737D5-2623-65CF-B538-702293C042BC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{10A0D7C7-BCA3-FAA1-C8C4-A5D5B14029E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10A0D7C7-BCA3-FAA1-C8C4-A5D5B14029E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10A0D7C7-BCA3-FAA1-C8C4-A5D5B14029E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10A0D7C7-BCA3-FAA1-C8C4-A5D5B14029E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
